@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to the Learning Management System</h1>
+<p>Choose a section to navigate:</p>
+<ul>
+    <li><a href="{% url 'student_records:student_list' %}">Students</a></li>
+    <li><a href="{% url 'course_info:course_list' %}">Courses</a></li>
+    <!-- Add more links as needed -->
+</ul>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Manage Enrolments</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="student">Student:</label>
+    <select name="student_id">
+        {% for student in students %}
+        <option value="{{ student.id }}">{{ student.name }}</option>
+        {% endfor %}
+    </select>
+    <label for="course">Course:</label>
+    <select name="course_id">
+        {% for course in courses %}
+        <option value="{{ course.id }}">{{ course.title }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Enroll">
+</form>
+{% endblock %}

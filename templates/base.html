@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your LMS by HK</title>
+    <!-- Add any other meta tags, styles, or scripts here -->
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+    <header>
+        {% include "partials/header.html" %}
+    </header>
+    <main>
+        {% block content %}
+        <!-- Content will be inserted here from other templates -->
+        {% endblock %}
+    </main>
+    <footer>
+        {% include "partials/footer.html" %}
+    </footer>
+</body>
+</html>
